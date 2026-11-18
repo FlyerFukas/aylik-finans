@@ -1,0 +1,24 @@
+desen,tur,kategori,not
+# Sırayla denenir, ilk eşleşen kazanır. Aranan metin: "<hesap> :: <açıklama>" (büyük harf).
+# tur: gider | gelir | transfer. Gider kategorisinde artı tutar = iade, o kategoriden düşer.
+# Bu dosya ÖRNEKTİR. Kendi bankanın açıklama metinlerine göre düzenle; AD SOYAD yerine kendi adını yaz.
+# --- kredi kartı borç ödemesi (harcama kart ekstresinden sayılır, ödeme transfer) ---
+KK TAHSİLAT,transfer,Kredi kartı ödemesi,kart borcu
+# --- kendi hesapların arası ---
+GÖND: AD SOYAD,transfer,Kendi hesapların arası,
+AD SOYAD.*FAST,transfer,Kendi hesapların arası,başka bankadaki kendi hesabın
+NOLU HESAPTAN|NOLU HESABA,transfer,Kendi hesapların arası,alt hesap
+# --- birikim ve yatırım ---
+FON ALIŞ|FON SATIŞ|HALKA ARZ,transfer,Birikim / yatırım,
+TEMETTÜ,gelir,Ek,
+# --- gelir ---
+MAAŞ|MAAS,gelir,Maaş,
+BURS ÖDEMESİ,gelir,Burs,
+# --- gider ---
+MİGROS|MIGROS|A101|BİM|BIM|ŞOK|SOK,gider,Market,
+YEMEKSEPETİ|GETİR|TRENDYOL YEMEK,gider,Yemek,
+İSTANBULKART|BELBİM,gider,Ulaşım,
+TURKCELL|VODAFONE|TÜRK TELEKOM,gider,Fatura,
+NETFLIX|SPOTIFY|YOUTUBE,gider,Abonelik,
+ECZANE,gider,Sağlık,
+EFT ÜCRETİ|HESAP İŞLETİM|FAİZ,gider,Faiz & banka masrafı,

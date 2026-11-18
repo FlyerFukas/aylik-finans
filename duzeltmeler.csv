@@ -1,0 +1,4 @@
+tarih,tutar,tur,kategori,not
+# Kuralın bilemeyeceği tek seferlik bilgiler. tarih + tutar eşleşen satırın kategorisini ezer.
+# Örnek satır (kurgusal):
+2026-01-15,-250.00,gider,Hediye,doğum günü hediyesi

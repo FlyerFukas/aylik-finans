@@ -1,0 +1,6 @@
+# Banka dökümleri ve üretilen çıktılar: kişisel finans verisi
+veri/hareketler_*.csv
+veri/uygulama_*.json
+__pycache__/
+*.pyc
+veri/taninmayan_*.txt
